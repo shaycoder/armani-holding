@@ -1,0 +1,46 @@
+.info {
+    background: $black;
+    color: $white;
+    margin-block: 3rem;
+    @mixin atMedium {
+        margin-block: 4rem;
+    }
+    position: relative;
+    z-index: 1;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background-size: cover;
+        z-index: -1;
+    }
+
+    &::before {
+        background: url('assets/images/bg-upper.png') no-repeat;
+        top: -60px;
+        left: 8%;
+        @mixin atMedium {
+            top: -50px;
+            left: 20%;
+        }
+        @mixin forSmall {
+            background-size: 90%;
+        }
+    }
+
+    &::after {
+        background: url('assets/images/bg-lower.png') no-repeat;
+        bottom: -95px;
+        left: 8%;
+        @mixin atMedium {
+            bottom: -60px;
+            left: 20%;
+        }
+        @mixin forSmall {
+            background-size: 90%;
+        }
+    }
+}

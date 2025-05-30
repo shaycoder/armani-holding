@@ -1,0 +1,59 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(4deg, $gold, $black, $black);
+
+    h1 {
+        @mixin atMedium {
+            margin-bottom: 2rem;
+        }
+        margin-bottom: 1rem;
+        letter-spacing: 2px;
+        @mixin goldGradient;
+    }
+
+    p {
+        max-width: 380px;
+        color: $white;
+    }
+
+    .hero-img-container {
+        align-items: flex-end;
+    }
+
+    .two-column {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        @mixin forSmall {
+            flex-direction: column;
+        }
+      }
+      
+      .two-column > .col-left {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding: 1.2rem;
+        @mixin atMedium {
+            width: 50%;
+            padding: 0 16px 0 0;
+        }
+      }
+      
+      .two-column > .col-right {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding: 1.2rem;
+        @mixin atMedium {
+            width: 50%;
+            padding: 0 0 0 16px;
+        }
+      }
+}

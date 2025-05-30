@@ -1,0 +1,40 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+
+    @mixin forSmall {
+      background: linear-gradient(45deg, $gold, $black, $black, $gold);
+    }
+
+    img {
+        width: 180px;
+        @mixin forSmall {
+          margin: 0 auto;
+        }
+    }
+
+    ul {
+      @mixin forSmall {
+        display: none;
+      }
+    }
+  }
+  
+  .menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu a {
+    @mixin goldGradient;
+    margin: 0 1rem;
+    font-size: 1.25rem;
+  }
+  
+  .menu a:hover {
+    text-decoration: underline;
+  }

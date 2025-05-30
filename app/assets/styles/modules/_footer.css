@@ -1,0 +1,46 @@
+.footer {
+    background-color: $black;
+    background: linear-gradient(4deg, $gold, $black, $black);
+
+    & > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 0;
+        @mixin forSmall {
+            flex-direction: column;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 1.2rem 2rem;
+            @mixin forSmall {
+                padding: 1rem 0;
+            }
+        }
+
+        i {
+            @mixin goldGradient;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    p {
+        text-align: center;
+        color: $white;
+        @mixin forSmall {
+            padding: 0 1rem;
+        }
+    }
+}

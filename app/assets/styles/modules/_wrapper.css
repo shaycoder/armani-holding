@@ -1,0 +1,13 @@
+.wrapper {
+    padding: 1.5rem;
+    @mixin atMedium {
+        padding: 3.125rem 6.25rem;
+    }
+}
+
+.wrapper-sec {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    @mixin atMedium {
+        padding: 3.125rem 6.25rem;
+    }
+}

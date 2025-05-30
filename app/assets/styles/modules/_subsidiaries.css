@@ -1,0 +1,154 @@
+.subsidiaries {
+    background: $black;
+    position: relative;
+
+    h2 {
+        @mixin goldGradient;
+        letter-spacing: 3px;
+        padding: 2rem;
+        text-align: right;
+        line-height: 1.5;
+    }
+}
+
+.subsidiary {
+    position: relative;
+    margin: 2.5rem auto;
+    max-width: 1000px;
+    @mixin atMedium {
+        padding: 2rem;
+        margin: 0 auto;
+        border-right: 2px solid $gold;
+        border-top: 2px solid $gold; 
+        
+        &:nth-child(2) {
+            border-left: none;
+            border-right: 2px solid $gold;
+        }
+
+        &:nth-child(3) {
+            border-right: none;
+            border-left: 2px solid $gold;
+        }
+    }
+
+    &__desc {
+        padding: 1.2rem .8rem;
+        @mixin atMedium {
+            position: absolute;
+            top: 30%;
+            right: -20%;
+            max-width: 500px;
+            padding: 1.2rem;
+        }        
+        color: $black;
+        background: $black;
+        @mixin forSmall {
+            border: 2px dotted $gold;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            @mixin atMedium {
+                font-size: 2rem;
+            }
+            margin-bottom: 1.2rem;
+            font-weight: bold;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+            @mixin goldGradient;
+        }
+
+        p {
+            line-height: 1.4;
+            font-size: 1.15rem;
+            color: $white;
+        }
+
+        .btn {
+            border-radius: 25px;
+            background: $black;
+            padding: .5rem 1.4rem;
+            color: $white !important;
+            margin-top: .8rem;
+            border: 2px solid $gold;
+        }
+    }
+
+    .alt-pos {
+        @mixin atMedium {
+            left: -20%;
+        }
+    }
+}
+
+
+.info {
+    background: $black;
+    color: $white;
+    max-width: 1000px;
+    margin: 4rem auto;
+    position: relative;
+    z-index: 1;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background-size: cover;
+        z-index: -1;
+    }
+
+    &::before {
+        background: url('assets/images/bg-upper.png') no-repeat;
+        top: -60px;
+        left: 8%;
+        @mixin atMedium {
+            top: -50px;
+            left: 20%;
+        }
+        @mixin forSmall {
+            background-size: 90%;
+        }
+    }
+
+    &::after {
+        background: url('assets/images/bg-lower.png') no-repeat;
+        bottom: -80px;
+        left: 8%;
+        @mixin atMedium {
+            bottom: -60px;
+            left: 20%;
+        }
+        @mixin forSmall {
+            background-size: 90%;
+        }
+    }
+}
+
+.about {
+    background: $black;
+    color: $white;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: radial-gradient(circle, $black, $black, $gold);
+
+    h2 {
+        text-align: left;
+        margin-bottom: 2rem;
+        letter-spacing: 3px;
+        @mixin goldGradient;
+    }
+
+    ul li span {
+        margin-right: 3px;
+        @mixin goldGradient;
+        font-size: large;
+    }
+}
+
+.logo {
+    max-width: 200px;
+}

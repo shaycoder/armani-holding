@@ -1,0 +1,35 @@
+@define-mixin atSmall {
+    @media (min-width: 530px) {
+        @mixin-content;
+    }
+}
+
+@define-mixin forSmall {
+    @media (max-width: 530px) {
+        @mixin-content;
+    }
+}
+
+@define-mixin atMedium {
+    @media (min-width: 800px) {
+        @mixin-content;
+    }
+}
+
+@define-mixin atLarge {
+    @media (min-width: 1010px) {
+        @mixin-content;
+    }
+}
+
+@define-mixin textGradient {
+    background: -webkit-linear-gradient(#004523, #212529, #004523, #004523, #004523);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@define-mixin goldGradient {
+    background: -webkit-linear-gradient(#FCF481, #DFB11F, #FCF481);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
