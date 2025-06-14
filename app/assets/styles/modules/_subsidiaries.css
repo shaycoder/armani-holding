@@ -61,17 +61,8 @@
 
         p {
             line-height: 1.4;
-            font-size: 1.15rem;
+            /*font-size: 1.15rem;*/
             color: $white;
-        }
-
-        .btn {
-            border-radius: 25px;
-            background: $black;
-            padding: .5rem 1.4rem;
-            color: $white !important;
-            margin-top: .8rem;
-            border: 2px solid $gold;
         }
     }
 
@@ -80,75 +71,4 @@
             left: -20%;
         }
     }
-}
-
-
-.info {
-    background: $black;
-    color: $white;
-    max-width: 1000px;
-    margin: 4rem auto;
-    position: relative;
-    z-index: 1;
-
-    &::before, &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        height: 100px;
-        background-size: cover;
-        z-index: -1;
-    }
-
-    &::before {
-        background: url('assets/images/bg-upper.png') no-repeat;
-        top: -60px;
-        left: 8%;
-        @mixin atMedium {
-            top: -50px;
-            left: 20%;
-        }
-        @mixin forSmall {
-            background-size: 90%;
-        }
-    }
-
-    &::after {
-        background: url('assets/images/bg-lower.png') no-repeat;
-        bottom: -80px;
-        left: 8%;
-        @mixin atMedium {
-            bottom: -60px;
-            left: 20%;
-        }
-        @mixin forSmall {
-            background-size: 90%;
-        }
-    }
-}
-
-.about {
-    background: $black;
-    color: $white;
-    max-width: 1000px;
-    margin: 0 auto;
-    background: radial-gradient(circle, $black, $black, $gold);
-
-    h2 {
-        text-align: left;
-        margin-bottom: 2rem;
-        letter-spacing: 3px;
-        @mixin goldGradient;
-    }
-
-    ul li span {
-        margin-right: 3px;
-        @mixin goldGradient;
-        font-size: large;
-    }
-}
-
-.logo {
-    max-width: 200px;
 }

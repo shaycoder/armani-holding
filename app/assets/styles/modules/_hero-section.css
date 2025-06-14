@@ -5,16 +5,18 @@
     background: linear-gradient(4deg, $gold, $black, $black);
 
     h1 {
-        @mixin atMedium {
-            margin-bottom: 2rem;
-        }
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         letter-spacing: 2px;
         @mixin goldGradient;
+
+        @mixin forSmall {
+            text-align: center;
+            margin-block: 2rem;
+        }
     }
 
     p {
-        max-width: 380px;
+        max-width: 420px;
         color: $white;
     }
 

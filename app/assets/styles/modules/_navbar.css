@@ -10,9 +10,12 @@
 
     img {
         width: 180px;
-        @mixin forSmall {
-          margin: 0 auto;
-        }
+    }
+
+    a {
+      @mixin forSmall {
+        margin: 0 auto;
+      }
     }
 
     ul {

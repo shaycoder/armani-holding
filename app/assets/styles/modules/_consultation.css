@@ -1,0 +1,100 @@
+.consultation {
+    color: #fff;
+    h2 {
+        @mixin goldGradient;
+        text-align: left;
+        margin-top: 0;
+
+        @mixin forSmall {
+            text-align: center;
+        }
+    }
+
+    &_steps {
+        /*div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem;
+        }*/
+        margin: 2rem;
+
+        @mixin forSmall {
+            margin: .25rem;
+        }
+
+        /*h3 span {
+            font-size: 200%;
+            @mixin goldGradient;
+            margin-right: 1rem;
+            border: 1px inset $gold;
+            padding: .15rem;
+        }*/
+
+        .consultation_step {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            align-items: start;
+            padding: 2rem;
+            margin: 2rem 0;
+
+            @mixin forSmall {
+                flex-direction: column;
+                padding: 0;
+                gap: .5rem;
+                align-items: center;
+            }
+
+            h3 {
+                @mixin goldGradient;
+                font-size: 1.35rem;
+                @mixin forSmall {
+                    text-align: center;
+                    font-size: 1.3rem;
+                }
+            }
+
+            span {
+                font-size: 2.2rem;
+                @mixin goldGradient;
+                border: 1px inset $gold;
+                padding: .5rem;
+
+                @mixin forSmall {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    &_images {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 50%;
+        }
+    }
+
+    &_btn {
+        display: flex;
+        justify-content: center;
+        a {
+            margin: 5rem auto 2rem;
+            font-size: 1.25rem;
+            font-weight: 500;
+            transition: all ease-in-out 0.5s;
+
+            @mixin forSmall {
+                margin-top: 4rem;
+                margin-bottom: 1rem;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
