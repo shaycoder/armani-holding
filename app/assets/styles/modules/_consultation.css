@@ -1,11 +1,18 @@
 .consultation {
     color: #fff;
+    @mixin atMedium {
+        padding-top: 5rem;
+    }
+    @mixin forSmall {
+        padding: 1rem;
+    }
     h2 {
         @mixin goldGradient;
         text-align: left;
         margin-top: 0;
 
         @mixin forSmall {
+            margin-top: 2rem;
             text-align: center;
         }
     }
@@ -38,6 +45,7 @@
             align-items: start;
             padding: 2rem;
             margin: 2rem 0;
+            background: url('../assets/images/bg-logo.png') center center/cover no-repeat;
 
             @mixin forSmall {
                 flex-direction: column;
@@ -53,16 +61,35 @@
                     text-align: center;
                     font-size: 1.3rem;
                 }
+                text-transform: uppercase;
             }
 
             span {
+                font-size: 1.2rem;
+                @mixin goldGradient;
+                padding: .5rem;
+
+                @mixin forSmall {
+                    font-size: 1.5rem;
+                }
+            }
+
+            ul li {
+                color: #f7f7f7;
+                @mixin atMedium {
+                    font-size: 1.2rem;
+                }
+                padding: .5rem;
+            }
+
+            .number-span {
                 font-size: 2.2rem;
                 @mixin goldGradient;
                 border: 1px inset $gold;
                 padding: .5rem;
 
                 @mixin forSmall {
-                    font-size: 1.5rem;
+                    font-size: 1rem;
                 }
             }
         }
@@ -75,6 +102,10 @@
         align-items: center;
         img {
             width: 50%;
+        }
+        @mixin forSmall {
+            padding: 0 1rem;
+            gap: 1rem;
         }
     }
 

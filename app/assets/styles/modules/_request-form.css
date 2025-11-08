@@ -14,6 +14,7 @@
 
     .container {
         padding: 3rem;
+        max-width: 1000px;
     }
 
     h2 {
@@ -27,7 +28,6 @@
         justify-content: start;
         flex-direction: column;
         gap: 2rem;
-        max-width: 1000px;
 
         .website {
             display: none;
@@ -39,6 +39,7 @@
             width: 100%;
             @mixin atMedium {
                 width: 75%;
+                gap: .5rem;
             }
         }
 
@@ -58,7 +59,7 @@
                 border: 1px solid #fff;
                 color: #f7f7f7;
                 &::placeholder {
-                    color: #f7f7f7;
+                    color: #bcbbbb;
                 }
             }
         }

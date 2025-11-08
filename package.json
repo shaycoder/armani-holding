@@ -21,6 +21,7 @@
   "homepage": "https://github.com/shaycoder/armani-holding#readme",
   "dependencies": {
     "aos": "^3.0.0-beta.6",
+    "bootstrap": "^5.3.6",
     "lodash": "^4.17.21",
     "normalize.css": "^8.0.1"
   },

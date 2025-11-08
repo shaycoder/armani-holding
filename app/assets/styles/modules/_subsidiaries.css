@@ -1,4 +1,4 @@
-.subsidiaries {
+/*.subsidiaries {
     background: $black;
     position: relative;
 
@@ -62,13 +62,112 @@
         p {
             line-height: 1.4;
             /*font-size: 1.15rem;*/
-            color: $white;
+            /*color: $white;
         }
     }
 
     .alt-pos {
         @mixin atMedium {
             left: -20%;
+        }
+    }
+}*/
+
+.subsidiaries {
+    background: $black;
+    position: relative;
+
+    h2 {
+        @mixin goldGradient;
+        letter-spacing: 3px;
+        padding: 2rem;
+        text-align: right;
+        line-height: 1.5;
+    }
+}
+
+.subsidiary {
+    position: relative;
+    margin: 2.5rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    @mixin forSmall{
+        grid-template-columns: 1fr;
+    }
+
+    &__sec {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        flex-wrap: wrap;
+        /*gap: .5rem;*/
+        background-color: $white;
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+           
+            @mixin atMedium {
+                width: 200px;
+                gap: 1rem;
+                /*border: 2px solid $lightgold;*/
+            }
+
+            div {
+                @mixin forSmall {
+                    order: 2;
+                }
+            }
+
+            img {
+                @mixin forSmall {
+                    order: 1;
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                padding: 1rem;
+                @mixin atMedium {
+                    background-color: #f9f9f9;
+                    border-radius: 15px 0;
+                }
+            }
+
+            ul li {
+                font-size: .8rem;
+                padding: .2rem .9rem;
+            }
+
+            h4 {
+                padding: 0 1rem;
+                @mixin forSmall {
+                    text-align: center;
+                    background-color: #2e2d2d;
+                    padding: 1rem;
+                    color: $lightgold;
+                }
+            }
+        }
+
+        @mixin forSmall {
+            order: 1;
+        }
+    }
+
+    .f-center {
+        @mixin atMedium {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+        }
+    }
+
+    img {
+        @mixin forSmall {
+            order: 2;
         }
     }
 }

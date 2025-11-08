@@ -1,5 +1,8 @@
-import '../styles/styles.css';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Loader from './modules/Loader';
 import AOS from 'aos';
+import '../styles/styles.css';
 
 // init AOS animation
 window.addEventListener("load", () => {
@@ -12,3 +15,6 @@ window.addEventListener("load", () => {
 if(module.hot) {
     module.hot.accept()
 }
+
+new Loader();
+
